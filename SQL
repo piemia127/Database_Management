@@ -1,0 +1,56 @@
+CREATE DATABASE CustomerManagement;
+USE CustomerManagement;
+CREATE TABLE Customers (
+    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    PhoneNumber VARCHAR(15),
+    Address VARCHAR(255),
+    RegistrationDate DATE,
+    CustomerType ENUM('Individual', 'Corporate') NOT NULL
+);
+CREATE TABLE SalesOrders (
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT,
+    OrderDate DATE,
+    TotalAmount DECIMAL(10, 2),
+    PaymentStatus ENUM('Pending', 'Completed', 'Failed'),
+    DeliveryStatus ENUM('Pending', 'Shipped', 'Delivered'),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+CREATE TABLE Products (
+    ProductID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Description TEXT,
+    Price DECIMAL(10, 2),
+    StockQuantity INT,
+    CategoryID INT
+);
+CREATE TABLE OrderDetails (
+    OrderID INT,
+    ProductID INT,
+    Quantity INT,
+    Price DECIMAL(10, 2),
+    PRIMARY KEY (OrderID, ProductID),
+    FOREIGN KEY (OrderID) REFERENCES SalesOrders(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+CREATE TABLE CustomerInteractions (
+    InteractionID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT,
+    Date DATE,
+    Mode ENUM('Email', 'Phone', 'In-Person'),
+    Description TEXT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+CREATE TABLE ServiceRequests (
+    RequestID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT,
+    ProductID INT,
+    IssueDescription TEXT,
+    RequestDate DATE,
+    ResolutionDate DATE,
+    Status ENUM('Open', 'In Progress', 'Closed'),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);

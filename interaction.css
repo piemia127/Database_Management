@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Marcellus&family=Marcellus+SC&family=Roboto+Slab:wght@100..900&display=swap');
+
+body {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F2F2F2;
+    margin: 20px;
+    color: #262626;
+    position: relative;
+}
+
+body {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F2F2F2;
+    margin: 20px;
+    color: #262626;
+    position: relative;
+}
+
+.container {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    color: #262626;
+    border: 1px solid #262626;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-family: "Arvo", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #262626;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 35px;
+    margin-top: -65px;
+    margin-bottom: -20px;
+}
+
+h2 {
+    padding: 0px 0;
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.interaction-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.interaction-list-header h2 {
+    margin: 0;
+}
+
+.interaction-list-header #searchInput {
+    width: 50%;
+}
+
+form {
+    font-family: "Arvo", serif;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-family: "Arvo", serif;
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+textarea,
+select {
+    font-family: "Arvo", serif;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    font-family: "Arvo", serif;
+    font-weight: 600;
+    background-color: #6A8AA6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #37538C;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    /* 移除白色背景 */
+    border: none;
+    /* 移除邊框 */
+}
+
+.actions form {
+    display: inline-block;
+    background-color: transparent;
+    /* 移除白色背景 */
+    border: none;
+    /* 移除邊框 */
+    padding: 0;
+    /* 移除內邊距 */
+    box-shadow: none;
+    /* 移除陰影 */
+
+    margin-bottom: 0px;
+    margin-top: -20px;
+}
+
+.actions input[type="submit"] {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #6A8AA6;
+    /* 設定按鈕顏色 */
+    color: #ffffff;
+    /* 設定按鈕文字顏色 */
+    border: none;
+    /* 移除按鈕邊框 */
+    border-radius: 4px;
+    /* 圓角 */
+
+}
+
+.actions input[type="submit"]:hover {
+    background-color: #37538C;
+    /* 懸停時顏色 */
+}
