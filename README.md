@@ -13,7 +13,7 @@ Before running this project, please ensure your computer has the following envir
 ## Installation and Execution Steps
 
 ### 1. Deploy Project Files
-Copy the entire project folder `DB_FinalProject_B10905104` to your Web Server's root directory.
+Copy the entire project folder to your Web Server's root directory.
 *   For **XAMPP**, the path is typically `C:\xampp\htdocs\`.
 *   For **MAMP**, the path is typically `/Applications/MAMP/htdocs/`.
 
